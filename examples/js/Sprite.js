@@ -2,6 +2,10 @@
 	Wraps three.sprite to take care of boilerplate and add data for the board to use.
  */
 var Sprite = function(settings) {
+	// var texture = new THREE.TextureLoader().load('/textures/catan.jpg');
+	// var tMaterial = new THREE.MeshBasicMaterial({
+	// 		map: texture
+	// 	});
 	var config = {
 		material: null,
 		geo: null,
@@ -44,7 +48,7 @@ var Sprite = function(settings) {
 		// for better performance, reuse materials as much as possible
 		this.material = new THREE.SpriteMaterial({
 			map: this.texture,
-			color: 0xffffff,
+			// color: 0xffffff,
 			// color: 0xff0000,
 			fog: true
 		});

@@ -478,7 +478,7 @@ define('EditorPlane', function() {
 
 		this.scene = scene;
 		this.grid = grid;
-
+``
 		this.hoverMesh = this.grid.generateTilePoly(new THREE.MeshBasicMaterial({
 			color: 0x1aaeff,
 			side: THREE.DoubleSide

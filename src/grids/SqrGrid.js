@@ -179,12 +179,17 @@ vg.SqrGrid.prototype = {
 			this._matCache[c.matConfig.mat_cache_id] = mat;
 		}*/
 
+		var texture = new THREE.TextureLoader().load('textures/catan.jpg');
+		var tMaterial = new THREE.MeshBasicMaterial({
+			map: texture
+		});
+
 		var t = new vg.Tile({
 			size: this.cellSize,
 			scale: scale,
 			cell: cell,
 			geometry: geo,
-			material: material
+			material: tMaterial
 		});
 
 		cell.tile = t;
@@ -207,7 +212,7 @@ vg.SqrGrid.prototype = {
 				bevelSize: this.cellSize/20,
 				bevelThickness: this.cellSize/20
 			}
-		}
+		};
 		settings = vg.Tools.merge(settings, config);
 
 		/*if (!settings.material) {

@@ -11,6 +11,10 @@ define('EditorPlane', function() {
 
 		this.geometry = null;
 		this.mesh = null;
+		// const texture = new THREE.TextureLoader().load( 'textures/catan.jpg' );
+		// this.material = new THREE.MeshBasicMaterial({
+		// 	map: texture
+		// });
 		this.material = new THREE.MeshBasicMaterial({
 			color: 0xffffff,
 			side: THREE.DoubleSide
