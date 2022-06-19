@@ -188,7 +188,10 @@ vg.HexGrid.prototype = {
 			mat = new THREE[c.matConfig.type](c.matConfig);
 			this._matCache[c.matConfig.mat_cache_id] = mat;
 		}*/
-
+		// var texture = new THREE.TextureLoader().load( 'textures/catan.jpg' );
+		// var tMaterial = new THREE.MeshBasicMaterial({
+		// 	map: texture
+		// });
 		var tile = new vg.Tile({
 			size: this.cellSize,
 			scale: scale,
@@ -217,7 +220,7 @@ vg.HexGrid.prototype = {
 				bevelSize: this.cellSize/20,
 				bevelThickness: this.cellSize/20
 			}
-		}
+		};
 		settings = vg.Tools.merge(settings, config);
 
 		/*if (!settings.material) {

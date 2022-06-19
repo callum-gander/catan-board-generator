@@ -8,7 +8,7 @@ define('Editor', function() {
 	var motor = require('motor');
 
 	// TODO: get these values from UI
-	var heightStep = 3;
+	var heightStep = 1;
 
 	// PRIVATE
 	var lastHeight = 1;
@@ -31,7 +31,7 @@ define('Editor', function() {
 	}
 
 	function onUserAction(type, overTile, data) {
-		var hit = nexus.mouse.allHits[0]
+		var hit = nexus.mouse.allHits[0];
 		switch (type) {
 			case vg.MouseCaster.WHEEL:
 				if (keyboard.shift && overTile) {
@@ -119,5 +119,5 @@ define('Editor', function() {
 
 	return {
 
-	}
+	};
 });

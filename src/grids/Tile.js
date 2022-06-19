@@ -5,10 +5,27 @@
 */
 vg.Tile = function(config) {
 	config = config || {};
+	// var texture = new THREE.TextureLoader().load( 'textures/catan.jpg' );
+	// var tMaterial = new THREE.MeshBasicMaterial({
+	// 	map: texture
+	// });
+	// wheat, forest, brick, stone, sheep, desert, water
+	var colors = ['#FEBA1A', '#2F6529', '#DC6320', '#6D687E', '#7DC245', '#000000', '#01A6E6'];
+	function getRndInteger(min, max) {
+		return Math.floor(Math.random() * (max - min) ) + min;
+	}
+
+	var randomMaterial = new THREE.MeshBasicMaterial({
+			color: colors[getRndInteger(0, 6)],
+			side: THREE.DoubleSide
+		});
+
+
+
 	var settings = {
 		cell: null, // required vg.Cell
 		geometry: null, // required threejs geometry
-		material: null // not required but it would improve performance significantly
+		material: randomMaterial // not required but it would improve performance significantly
 	};
 	settings = vg.Tools.merge(settings, config);
 
@@ -25,8 +42,10 @@ vg.Tile = function(config) {
 	this.geometry = settings.geometry;
 	this.material = settings.material;
 	if (!this.material) {
+		var test = colors[getRndInteger(0, 7)];
+		console.log(test);
 		this.material = new THREE.MeshPhongMaterial({
-			color: vg.Tools.randomizeRGB('30, 30, 30', 13)
+			color: test
 		});
 	}
 
