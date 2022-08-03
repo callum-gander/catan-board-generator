@@ -1,3 +1,9 @@
+# Catan Board Generator (postponed)
+
+Forked someone else's code for a 3d hex tile system to turn into a custom catan board generator. Not currently working on this due to other commitments but will come back to it. If it's not clear, this isn't in a working state
+
+
+
 # NOTE: This repo is no longer maintained
 
 Feel free to fork and do whatever. There is a dev branch that has an incomplete rewrite, but everything here is so old that even I don't get what I was thinking. Enjoy!
